@@ -11,11 +11,22 @@ public class GameManager : MonoBehaviour
         [SerializeField] private string name;
         [SerializeField] private GameObject prefab;
         [SerializeField] private Sprite requestSprite;
+        [SerializeField] private Transform offscreenStart;
+        [SerializeField] private Transform offscreenEnd;
 
-        public Instrument Create()
+        public Instrument Create(Transform parent)
         {
-            GameObject instance = Instantiate(prefab);
+            GameObject instance = Instantiate(prefab, parent);
             return instance.GetComponent<Instrument>();
+        }
+
+        public Transform OffscreenStart()
+        {
+            return offscreenStart;
+        }
+        public Transform OffscreenEnd()
+        {
+            return offscreenEnd;
         }
     }
 
@@ -28,10 +39,9 @@ public class GameManager : MonoBehaviour
     private Instrument curInstrument;
 
     [Header("Instrument Movement")]
+    [SerializeField] private Transform instrumentParent;
     [SerializeField] private float instrumentMoveTime = 1;
-    [SerializeField] private Transform instrumentStartPos;
     [SerializeField] private Transform instrumentPos;
-    [SerializeField] private Transform instrumentEndPos;
 
 
     private void Awake()
@@ -66,21 +76,37 @@ public class GameManager : MonoBehaviour
     {
         if (curInstrument != null)
         {
-            StartCoroutine(MoveInstrument(instrumentPos.position, instrumentEndPos.position, instrumentMoveTime, curInstrument));
+            StartCoroutine(MoveInstrument(instrumentPos, curInstrumentInfo.OffscreenEnd(), instrumentMoveTime, curInstrument, true));
         }
-        curInstrument = newInstrument.Create();
+        curInstrument = newInstrument.Create(instrumentParent);
         curInstrumentInfo = newInstrument;
-        yield return StartCoroutine(MoveInstrument(instrumentStartPos.position, instrumentPos.position, instrumentMoveTime, curInstrument));
+        yield return StartCoroutine(MoveInstrument(curInstrumentInfo.OffscreenStart(), instrumentPos, instrumentMoveTime, curInstrument));
     }
 
-    private IEnumerator MoveInstrument(Vector2 start, Vector2 end, float time, Instrument newInstrument)
+    private IEnumerator MoveInstrument(Transform start, Transform end, float time, Instrument newInstrument)
+    {
+        yield return MoveInstrument(start, end, time, newInstrument, false);
+    }
+
+    private IEnumerator MoveInstrument(Transform start, Transform end, float time, Instrument instrument, bool destroyAtEnd)
     {
         float timePassed = 0;
         while (timePassed < time)
         {
             timePassed += Time.deltaTime;
-            newInstrument.transform.position = Vector2.Lerp(start, end, timePassed / time);
+            instrument.transform.position = Vector3.Lerp(start.position, end.position, timePassed / time);
+            instrument.transform.localScale = Vector3.Lerp(start.localScale, end.localScale, timePassed / time);
+            instrument.transform.rotation = Quaternion.Lerp(start.rotation, end.rotation, timePassed / time);
             yield return new WaitForEndOfFrame();
         }
+        if (destroyAtEnd)
+        {
+            instrument.Destroy();
+        }
+    }
+
+    public static bool Click()
+    {
+        return false;
     }
 }
