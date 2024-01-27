@@ -682,7 +682,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: -299.99988, y: 0}
+  m_AnchoredPosition: {x: -299.99994, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &619394800
@@ -943,6 +943,16 @@ MonoBehaviour:
     requestSprite: {fileID: 0}
     offscreenStart: {fileID: 372882211}
     offscreenEnd: {fileID: 790070935}
+  - name: Piano
+    prefab: {fileID: 6505838322557668001, guid: adb59646c637a48a09e420154e44d753, type: 3}
+    requestSprite: {fileID: 0}
+    offscreenStart: {fileID: 372882211}
+    offscreenEnd: {fileID: 790070935}
+  - name: Fish
+    prefab: {fileID: 3009744537736355860, guid: b0ba4843b0d7f4473838dba2124c7d65, type: 3}
+    requestSprite: {fileID: 0}
+    offscreenStart: {fileID: 372882211}
+    offscreenEnd: {fileID: 790070935}
   instrumentParent: {fileID: 90493079}
   instrumentMoveTime: 1
   instrumentPos: {fileID: 1977365422}
@@ -1024,7 +1034,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 299.99988, y: 0}
+  m_AnchoredPosition: {x: 299.99994, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1977365421
