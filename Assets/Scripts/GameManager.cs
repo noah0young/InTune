@@ -46,6 +46,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Transform instrumentParent;
     [SerializeField] private float instrumentMoveTime = 1;
     [SerializeField] private Transform instrumentPos;
+    [SerializeField] private GameObject thanksObj;
 
 
     private void Awake()
@@ -60,6 +61,7 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
         SetUpInput();
+        thanksObj.SetActive(false);
     }
 
     private void SetUpInput()
@@ -88,10 +90,12 @@ public class GameManager : MonoBehaviour
         if (curInstrument != null)
         {
             StartCoroutine(MoveInstrument(instrumentPos, curInstrumentInfo.OffscreenEnd(), instrumentMoveTime, curInstrument, true));
+            thanksObj.SetActive(true);
         }
         curInstrument = newInstrument.Create(instrumentParent);
         curInstrumentInfo = newInstrument;
         yield return StartCoroutine(MoveInstrument(curInstrumentInfo.OffscreenStart(), instrumentPos, instrumentMoveTime, curInstrument));
+        thanksObj.SetActive(false);
     }
 
     private IEnumerator MoveInstrument(Transform start, Transform end, float time, Instrument newInstrument)

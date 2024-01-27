@@ -77,9 +77,9 @@ public class ButtonSwitchGame : TuningGame
         buttons = new Button[buttonVals.GetLength(0), buttonVals.GetLength(1)];
         RectTransform gridHolderRect = gridHolder.GetComponent<RectTransform>();
         gridHolder.cellSize = new Vector2(gridHolderRect.rect.width / numButtonsPerSide, gridHolderRect.rect.height / numButtonsPerSide);
-        for (int x = 0; x < buttonVals.GetLength(0); x++)
+        for (int y = 0; y < buttonVals.GetLength(1); y++)
         {
-            for (int y = 0; y < buttonVals.GetLength(1); y++)
+            for (int x = 0; x < buttonVals.GetLength(0); x++)
             {
                 Vector2Int index = new Vector2Int(x, y);
                 buttons[x, y] = Instantiate(buttonGameButtonPrefab, gridHolder.transform).GetComponent<Button>();

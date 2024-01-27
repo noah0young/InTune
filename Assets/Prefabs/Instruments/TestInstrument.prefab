@@ -590,26 +590,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1868269057009546437, guid: d7128587d391d4782904192bca0beebb, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 5417838230316189193}
-    - target: {fileID: 5812499629055445528, guid: d7128587d391d4782904192bca0beebb, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5812499629055445528, guid: d7128587d391d4782904192bca0beebb, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5812499629055445528, guid: d7128587d391d4782904192bca0beebb, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5812499629055445528, guid: d7128587d391d4782904192bca0beebb, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 2100000, guid: 7b0f50f4e956048c5bc489b4fa389c30, type: 2}
     - target: {fileID: 6487636324282260111, guid: d7128587d391d4782904192bca0beebb, type: 3}
       propertyPath: m_Name
       value: TuningButton
