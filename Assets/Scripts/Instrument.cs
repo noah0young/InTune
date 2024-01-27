@@ -1,12 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Instrument : MonoBehaviour
 {
     [SerializeField] private List<GameObject> tuningMinigamesPrefabs;
     private List<TuningGame> tuningMinigames = new List<TuningGame>();
     private bool interactable = true;
+
+    [Header("Tuning Target UI")]
+    [SerializeField] private List<Button> targetButtons;
+    [SerializeField] private Material checkTargetMat;
 
     private void Start()
     {
@@ -17,6 +22,12 @@ public class Instrument : MonoBehaviour
             tuningMinigames.Add(minigame);
             minigame.SetInstrument(this, i);
             minigame.SetGameOpen(false);
+        }
+
+        for (int i = 0; i < targetButtons.Count; i++)
+        {
+            int buttonIndex = i;
+            targetButtons[i].onClick.AddListener(() => OpenMinigame(buttonIndex));
         }
     }
 
@@ -72,6 +83,15 @@ public class Instrument : MonoBehaviour
             {
                 Destroy(game.gameObject);
             }
+        }
+    }
+
+    public void SetTuned(int buttonIndex)
+    {
+        if (tuningMinigames[buttonIndex].IsTuned())
+        {
+            Debug.Log("Check button");
+            targetButtons[buttonIndex].GetComponent<Image>().material = checkTargetMat;
         }
     }
 }

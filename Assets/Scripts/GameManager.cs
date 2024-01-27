@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.InputSystem;
+using UnityEngine.Windows;
 
 public class GameManager : MonoBehaviour
 {
@@ -32,6 +34,8 @@ public class GameManager : MonoBehaviour
 
     public static GameManager Instance { get; private set; }
 
+    private InputController input;
+
     [Header("Instruments")]
     [SerializeField] private List<InstrumentInfo> allInstruments;
     private int instrumentIndex = 0;
@@ -55,6 +59,13 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        SetUpInput();
+    }
+
+    private void SetUpInput()
+    {
+        input = new InputController();
+        input.Game.Click.Enable();
     }
 
     private void Start()
@@ -105,8 +116,13 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public static bool NotClick()
+    {
+        return !Click();
+    }
+
     public static bool Click()
     {
-        return false;
+        return Instance.input.Game.Click.IsPressed();
     }
 }

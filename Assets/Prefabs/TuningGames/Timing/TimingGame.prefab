@@ -128,6 +128,9 @@ MonoBehaviour:
   targetRangePercent: 0.5
   speed: 0.5
   cursorSize: 0.03
+  successPrefab: {fileID: 7418126772434570213, guid: 3fb1536ccd9f9496fb35198e670a2ac0, type: 3}
+  failPrefab: {fileID: 4458156957599395478, guid: 101c568b840a64e9eb088292f3de5c04, type: 3}
+  showSuccessFailTime: 1
 --- !u!1 &5567040353030102484
 GameObject:
   m_ObjectHideFlags: 0
@@ -237,10 +240,10 @@ RectTransform:
   - {fileID: 3093458496971599833}
   m_Father: {fileID: 167488446840165860}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 89.5}
-  m_SizeDelta: {x: 0, y: 20}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6473926937534900952
 CanvasRenderer:

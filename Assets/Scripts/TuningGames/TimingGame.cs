@@ -83,21 +83,25 @@ public class TimingGame : TuningGame
 
     private IEnumerator WaitForClick()
     {
-        yield return new WaitUntil(() => GameManager.Click());
-        paused = true;
-        GameObject successFailPrefab = OnTime() ? successPrefab : failPrefab;
-        if (successFailPrefab != null)
+        while (!IsTuned())
         {
-            Destroy(Instantiate(successFailPrefab), showSuccessFailTime);
-        }
-        yield return new WaitForSeconds(showSuccessFailTime);
-        if (OnTime())
-        {
-            OnTuned();
-        }
-        else
-        {
-            paused = false;
+            yield return new WaitUntil(() => GameManager.NotClick());
+            yield return new WaitUntil(() => GameManager.Click());
+            paused = true;
+            GameObject successFailPrefab = OnTime() ? successPrefab : failPrefab;
+            if (successFailPrefab != null)
+            {
+                Destroy(Instantiate(successFailPrefab), showSuccessFailTime);
+            }
+            yield return new WaitForSeconds(showSuccessFailTime);
+            if (OnTime())
+            {
+                OnTuned();
+            }
+            else
+            {
+                paused = false;
+            }
         }
     }
 }
