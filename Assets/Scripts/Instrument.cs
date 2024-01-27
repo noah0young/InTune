@@ -90,7 +90,6 @@ public class Instrument : MonoBehaviour
     {
         if (tuningMinigames[buttonIndex].IsTuned())
         {
-            Debug.Log("Check button");
             targetButtons[buttonIndex].GetComponent<Image>().material = checkTargetMat;
         }
     }

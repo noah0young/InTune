@@ -26,12 +26,13 @@ public abstract class TuningGame : MonoBehaviour
         return tuned;
     }
 
-    public void SetGameOpen(bool open)
+    public virtual void SetGameOpen(bool open)
     {
         gameObject.SetActive(open);
-        if (open)
-        {
-            Debug.Log("Open game");
-        }
+    }
+
+    protected void CloseGame()
+    {
+        tunesFor.CloseGame(tuningIndex);
     }
 }

@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6090551581956463719}
   - component: {fileID: 5927014457404838372}
+  - component: {fileID: 4580245465637056008}
   m_Layer: 0
   m_Name: TextRPGGame
   m_TagString: Untagged
@@ -45,21 +46,120 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 359415bd2014a4daeac1f180c02c20ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textBox: {fileID: 5246941806682868537}
-  text: {fileID: 6269134459414298923}
+  textboxText: {fileID: 6269134459414298923}
   optionHolder: {fileID: 4296525506025965801}
   optionPrefab: {fileID: 5563890412691750725, guid: d7120e10ce3db405bb7976362590683d, type: 3}
+  defaultTextSound: {fileID: 8300000, guid: cafaa63a1db1746eda7e91dfc1928807, type: 3}
+  textSounds:
+  - name: default
+    clip: {fileID: 8300000, guid: cafaa63a1db1746eda7e91dfc1928807, type: 3}
+  - name: electric
+    clip: {fileID: 8300000, guid: 0344705b0d27744cb96ead74271490af, type: 3}
+  - name: fish
+    clip: {fileID: 8300000, guid: 09ad92e7fe7ec4784957c2a2e02a122a, type: 3}
+  - name: odd
+    clip: {fileID: 8300000, guid: 99130da65f2b34e9cbc29fc72ca74663, type: 3}
+  - name: 8bit
+    clip: {fileID: 8300000, guid: 73ef513b1634d47bdb3f640cb6ec9ce5, type: 3}
+  timeBetweenChars: 0.1
   dialogues:
-  - text: Hi There
-    options:
-    - optionName: Yes
-      goTo:
-        text: good
-        options: []
-    - optionName: No
-      goTo:
-        text: yep
-        options: []
+  - {fileID: 11400000, guid: 85729672825a84a048f49ceeb78affe1, type: 2}
+--- !u!82 &4580245465637056008
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1610475299015163294}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &4393219938576989171
 GameObject:
   m_ObjectHideFlags: 0
