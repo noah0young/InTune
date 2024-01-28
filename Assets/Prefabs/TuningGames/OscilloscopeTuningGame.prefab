@@ -179,9 +179,37 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1381298627311285280, guid: dd6d0ff5dfe9b44bebccdac15dd5c997, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Decrement
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529985743396095923, guid: dd6d0ff5dfe9b44bebccdac15dd5c997, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Increment
+      objectReference: {fileID: 0}
+    - target: {fileID: 1910419839977818918, guid: dd6d0ff5dfe9b44bebccdac15dd5c997, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Increment
+      objectReference: {fileID: 0}
     - target: {fileID: 2417409486179619548, guid: dd6d0ff5dfe9b44bebccdac15dd5c997, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2979432250350205452, guid: dd6d0ff5dfe9b44bebccdac15dd5c997, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4052163789874589627, guid: dd6d0ff5dfe9b44bebccdac15dd5c997, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Decrement
+      objectReference: {fileID: 0}
+    - target: {fileID: 5641506400742587013, guid: dd6d0ff5dfe9b44bebccdac15dd5c997, type: 3}
+      propertyPath: currentNumber
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5955504552884535040, guid: dd6d0ff5dfe9b44bebccdac15dd5c997, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Decrement
       objectReference: {fileID: 0}
     - target: {fileID: 6588694417151710436, guid: dd6d0ff5dfe9b44bebccdac15dd5c997, type: 3}
       propertyPath: m_Pivot.x
@@ -263,9 +291,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8079407471910923148, guid: dd6d0ff5dfe9b44bebccdac15dd5c997, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Increment
+      objectReference: {fileID: 0}
     - target: {fileID: 8276080889403618599, guid: dd6d0ff5dfe9b44bebccdac15dd5c997, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8581622020958543273, guid: dd6d0ff5dfe9b44bebccdac15dd5c997, type: 3}
+      propertyPath: currentNumber
+      value: 120
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2610771860994475830, guid: dd6d0ff5dfe9b44bebccdac15dd5c997, type: 3}

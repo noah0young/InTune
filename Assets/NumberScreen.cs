@@ -9,7 +9,7 @@ public class NumberScreen : MonoBehaviour
     [SerializeField] private SevenSegmentDisplayManager hundreds;
     [SerializeField] private SevenSegmentDisplayManager tens;
     [SerializeField] private SevenSegmentDisplayManager ones;
-    [SerializeField] private LightManager light;
+    [SerializeField] private LightManager indicatorLight;
     [SerializeField] private int currentNumber;
     [SerializeField] private int lowerBound;
     [SerializeField] private int upperBound;
@@ -33,22 +33,22 @@ public class NumberScreen : MonoBehaviour
         tens.SetNumber(int.Parse(numbero[2].ToString()));
         ones.SetNumber(int.Parse(numbero[3].ToString()));
 
-        if (lowerBound <= currentNumber && currentNumber >=upperBound)
+        if (lowerBound <= currentNumber && currentNumber <= upperBound)
         {
-            light.SetStatus(true);
+            indicatorLight.SetStatus(true);
         }
         else
         {
-            light.SetStatus(false);
+            indicatorLight.SetStatus(false);
         }
     }
 
-    public void increment(int amount = 10)
+    public void Increment(int amount = 10)
     {
         currentNumber += amount;
     }
 
-    public void decrement(int amount = 10)
+    public void Decrement(int amount = 10)
     {
         currentNumber -= amount;
         if(currentNumber < 0)
