@@ -5,21 +5,30 @@ using UnityEngine.UI;
 
 public class ButtonSwitchGame : TuningGame
 {
+    enum ButtonState
+    {
+        ON, OFF, MAYBE, MAYBE_NOT
+    }
+
+    [SerializeField] private Canvas mainCanvas;
     [TextAreaAttribute]
     [SerializeField] private string buttonStartState;
     [SerializeField] private GridLayoutGroup gridHolder;
-    private bool[,] buttonVals;
+    private ButtonState[,] buttonVals;
     private Button[,] buttons;
 
     [Header("Buttons")]
     [SerializeField] private GameObject buttonGameButtonPrefab;
-    [SerializeField] private Color onColor;
-    [SerializeField] private Color offColor;
+    [SerializeField] private Material onMat;
+    [SerializeField] private Material offMat;
+    [SerializeField] private Material maybeMat;
+    [SerializeField] private Material maybeNotMat;
 
     private void Start()
     {
+        mainCanvas.worldCamera = Camera.main;
         MakeAllButtons(buttonStartState);
-        SetAllButtons(buttonVals);
+        SetAllButtons();
         StartCoroutine(CheckFinished());
     }
 
@@ -35,7 +44,7 @@ public class ButtonSwitchGame : TuningGame
         {
             for (int y = 0; y < buttonVals.GetLength(1); y++)
             {
-                if (!buttonVals[x, y])
+                if (buttonVals[x, y] != ButtonState.ON)
                 {
                     return false;
                 }
@@ -50,7 +59,7 @@ public class ButtonSwitchGame : TuningGame
         int yIndex = 0;
         int xIndex = 0;
         int numButtonsPerSide = state.IndexOf('\n');
-        buttonVals = new bool[numButtonsPerSide, numButtonsPerSide];
+        buttonVals = new ButtonState[numButtonsPerSide, numButtonsPerSide];
         while (totalIndex < state.Length)
         {
             if (state[totalIndex] == '\n')
@@ -62,11 +71,19 @@ public class ButtonSwitchGame : TuningGame
             {
                 if (state[totalIndex] == '0')
                 {
-                    buttonVals[xIndex, yIndex] = false;
+                    buttonVals[xIndex, yIndex] = ButtonState.OFF;
                 }
                 else if (state[totalIndex] == '1')
                 {
-                    buttonVals[xIndex, yIndex] = true;
+                    buttonVals[xIndex, yIndex] = ButtonState.ON;
+                }
+                else if (state[totalIndex] == '2')
+                {
+                    buttonVals[xIndex, yIndex] = ButtonState.MAYBE;
+                }
+                else if (state[totalIndex] == '3')
+                {
+                    buttonVals[xIndex, yIndex] = ButtonState.MAYBE_NOT;
                 }
                 xIndex++;
             }
@@ -88,13 +105,29 @@ public class ButtonSwitchGame : TuningGame
         }
     }
 
-    private void SetAllButtons(bool[,] state)
+    private void SetAllButtons()
     {
         for (int x = 0; x < buttonVals.GetLength(0); x++)
         {
             for (int y = 0; y < buttonVals.GetLength(1); y++)
             {
-                buttons[x, y].GetComponentInChildren<Image>().color = state[x, y] ? onColor : offColor;
+                Material buttonMat = null;
+                switch (buttonVals[x, y])
+                {
+                    case ButtonState.ON:
+                        buttonMat = onMat;
+                        break;
+                    case ButtonState.OFF:
+                        buttonMat = offMat;
+                        break;
+                    case ButtonState.MAYBE:
+                        buttonMat = maybeMat;
+                        break;
+                    case ButtonState.MAYBE_NOT:
+                        buttonMat = maybeNotMat;
+                        break;
+                }
+                buttons[x, y].GetComponentInChildren<Image>().material = buttonMat;
             }
         }
     }
@@ -106,7 +139,7 @@ public class ButtonSwitchGame : TuningGame
         SwitchButtonIfPossible(buttonIndex + Vector2Int.down);
         SwitchButtonIfPossible(buttonIndex + Vector2Int.right);
         SwitchButtonIfPossible(buttonIndex + Vector2Int.left);
-        SetAllButtons(buttonVals);
+        SetAllButtons();
     }
 
     private void SwitchButtonIfPossible(Vector2Int buttonIndex)
@@ -116,6 +149,20 @@ public class ButtonSwitchGame : TuningGame
         {
             return; // No button exists at that spot
         }
-        buttonVals[buttonIndex.x, buttonIndex.y] = !buttonVals[buttonIndex.x, buttonIndex.y];
+        switch (buttonVals[buttonIndex.x, buttonIndex.y])
+        {
+            case ButtonState.ON:
+                buttonVals[buttonIndex.x, buttonIndex.y] = ButtonState.OFF;
+                break;
+            case ButtonState.OFF:
+                buttonVals[buttonIndex.x, buttonIndex.y] = ButtonState.ON;
+                break;
+            case ButtonState.MAYBE:
+                buttonVals[buttonIndex.x, buttonIndex.y] = ButtonState.MAYBE_NOT;
+                break;
+            case ButtonState.MAYBE_NOT:
+                buttonVals[buttonIndex.x, buttonIndex.y] = ButtonState.MAYBE;
+                break;
+        }
     }
 }

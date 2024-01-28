@@ -22,6 +22,10 @@ public class TimingGame : TuningGame
     private bool movingUp = true;
     private float cursorPos = .5f;
 
+    [Header("Target Possible Range")]
+    [SerializeField] private float targetRangeMax = 1f;
+    [SerializeField] private float targetRangeMin = 0f;
+
     [Header("On Click")]
     [SerializeField] private GameObject successPrefab;
     [SerializeField] private GameObject failPrefab;
@@ -36,7 +40,7 @@ public class TimingGame : TuningGame
 
     private void SetTargetRange()
     {
-        float targetRangeTop = Random.Range(targetRangePercent, 1);
+        float targetRangeTop = Random.Range(targetRangePercent + targetRangeMin, targetRangeMax);
         rangeTop = targetRangeTop;
         rangeBottom = rangeTop - targetRangePercent;
         targetRange.anchorMax = new Vector2(targetRange.anchorMax.x, targetRangeTop);

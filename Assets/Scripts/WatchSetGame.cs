@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class WatchSetGame : HoldInPlaceTuningGame
 {
+    [SerializeField] private bool broken = false;
     [SerializeField] private Canvas mainCanvas;
     [SerializeField] private GameObject hourHand;
     [SerializeField] private GameObject minHand;
@@ -12,35 +13,12 @@ public class WatchSetGame : HoldInPlaceTuningGame
     [SerializeField] private float minRange = 5;
     private float curMin;
     private float curHour;
-    /*[SerializeField] private float holdTime = .5f;
-    private bool completeHolding;
-    [SerializeField] private GameObject onTimeShowObj;
-
-    [Header("Coroutines")]
-    private IEnumerator checkOnTime;*/
 
     protected override void Start()
     {
         mainCanvas.worldCamera = Camera.main;
         base.Start();
     }
-
-    /*public override void SetGameOpen(bool open)
-    {
-        base.SetGameOpen(open);
-        completeHolding = false;
-        if (checkOnTime != null)
-        {
-            StopCoroutine(checkOnTime);
-            checkOnTime = null;
-        }
-        if (open)
-        {
-            checkOnTime = CheckOnTime();
-            StartCoroutine(checkOnTime);
-            ShowOnTime(false);
-        }
-    }*/
 
     private void Update()
     {
@@ -63,39 +41,17 @@ public class WatchSetGame : HoldInPlaceTuningGame
         int actualHour = Clock.CurHour();
         int curMinInt = (int)curMin;
         int curHourInt = (int)curHour;
-        return (curMinInt > actualMin - minRange / 2 && curMinInt < actualMin + minRange / 2
+        return !broken && (curMinInt > actualMin - minRange / 2 && curMinInt < actualMin + minRange / 2
             && curHourInt == actualHour);
     }
 
-    /*private IEnumerator CheckOnTime()
+    public int GetCurMin()
     {
-        while (true)
-        {
-            yield return new WaitUntil(() => OnTime());
-            IEnumerator waitCheck = WaitCheck();
-            StartCoroutine(waitCheck);
-            ShowOnTime(true);
-            yield return new WaitUntil(() => completeHolding || !OnTime());
-            if (!OnTime())
-            {
-                StopCoroutine(waitCheck);
-                ShowOnTime(false);
-            }
-            else
-            {
-                OnTuned();
-            }
-        }
+        return (int)curMin;
     }
 
-    private IEnumerator WaitCheck()
+    public int GetCurHour()
     {
-        yield return new WaitForSeconds(holdTime);
-        completeHolding = true;
+        return (int)curHour;
     }
-
-    private void ShowOnTime(bool onTime)
-    {
-        onTimeShowObj.SetActive(onTime);
-    }*/
 }

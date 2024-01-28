@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e4c1fa53dae244ec8e95196c75b6f14, type: 3}
+  m_Name: FishTuneIt
+  m_EditorClassIdentifier: 
+  texts:
+  - You try to tune it
+  - What tuning fork would you like to use
+  options:
+  - optionName: Tuning fork
+    goTo: {fileID: 11400000, guid: 316f6ad7d34f94d65abb7b36fde7a8c8, type: 2}
+  - optionName: Pitch fork
+    goTo: {fileID: 0}
+  - optionName: Fork lift
+    goTo: {fileID: 11400000, guid: 5ce301725eeb042cb990c6d5fef55ea6, type: 2}
+  - optionName: Kitchen fork
+    goTo: {fileID: 11400000, guid: f1110ceecc83e43e6a994c613dec04da, type: 2}
+  next: {fileID: 0}

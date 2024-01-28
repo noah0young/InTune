@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e4c1fa53dae244ec8e95196c75b6f14, type: 3}
+  m_Name: FishTuningFork
+  m_EditorClassIdentifier: 
+  texts:
+  - The tuning fork made a sound
+  - Would you like to try again
+  options:
+  - optionName: Yes
+    goTo: {fileID: 11400000, guid: 2fa9fc450f98749638564e7f81aaf558, type: 2}
+  - optionName: No
+    goTo: {fileID: 11400000, guid: e0df0bfda437840eaa6c9972944ca29f, type: 2}
+  next: {fileID: 0}

@@ -19,7 +19,7 @@ public class Dialogue : ScriptableObject
     public List<string> texts;
     public List<DialogueOption> options;
     private List<GameObject> optionInstances = new List<GameObject>();
-    private Dialogue next = null;
+    [SerializeField] private Dialogue next = null;
 
     public bool HasOptions()
     {
@@ -46,7 +46,7 @@ public class Dialogue : ScriptableObject
         DestroyAllOptionInstances();
     }
 
-    private void DestroyAllOptionInstances()
+    public void DestroyAllOptionInstances()
     {
         foreach (GameObject instance in optionInstances)
         {

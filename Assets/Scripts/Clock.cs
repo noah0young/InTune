@@ -5,17 +5,17 @@ using UnityEngine;
 
 public class Clock : MonoBehaviour
 {
-    [SerializeField] private SevenSegmentDisplayManager hour10s;
-    [SerializeField] private SevenSegmentDisplayManager hour1s;
-    [SerializeField] private SevenSegmentDisplayManager min10s;
-    [SerializeField] private SevenSegmentDisplayManager min1s;
+    [SerializeField] protected SevenSegmentDisplayManager hour10s;
+    [SerializeField] protected SevenSegmentDisplayManager hour1s;
+    [SerializeField] protected SevenSegmentDisplayManager min10s;
+    [SerializeField] protected SevenSegmentDisplayManager min1s;
 
     private void Update()
     {
         UpdateTime();
     }
 
-    private void UpdateTime()
+    protected virtual void UpdateTime()
     {
         int hour = DateTime.Now.Hour;
         hour10s.SetNumber(hour % 12 / 10);

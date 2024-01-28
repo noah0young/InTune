@@ -118,14 +118,14 @@ public class BoxSlideGame : TuningGame
     {
         if (NextToEmpty(buttonIndex))
         {
-            Swap(buttonIndex, EmptyIndex());
+            Swap(buttonIndex, EmptyIndexClosestTo(buttonIndex));
         }
         SetAllButtons();
     }
 
     private bool NextToEmpty(Vector2Int buttonIndex)
     {
-        Vector2Int difference = buttonIndex - EmptyIndex();
+        Vector2Int difference = buttonIndex - EmptyIndexClosestTo(buttonIndex);
         return (difference == Vector2Int.down || difference == Vector2Int.up ||
             difference == Vector2Int.right || difference == Vector2Int.left);
     }
@@ -138,18 +138,26 @@ public class BoxSlideGame : TuningGame
         SetAllButtons();
     }
 
-    private Vector2Int EmptyIndex()
+    private Vector2Int EmptyIndexClosestTo(Vector2Int index)
     {
+        Vector2Int nearestEmpty = new Vector2Int(-1, -1);
         for (int x = 0; x < squarePos.GetLength(0); x++)
         {
             for (int y = 0; y < squarePos.GetLength(1); y++)
             {
                 if (squarePos[x, y] == -1)
                 {
-                    return new Vector2Int(x, y);
+                    if (Vector2.Distance(nearestEmpty, index) > Vector2.Distance(new Vector2Int(x, y), index))
+                    {
+                        nearestEmpty = new Vector2Int(x, y);
+                    }
                 }
             }
         }
-        throw new System.Exception("Empty not found");
+        if (nearestEmpty == new Vector2Int(-1, -1))
+        {
+            throw new System.Exception("Empty not found");
+        }
+        return nearestEmpty;
     }
 }

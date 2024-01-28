@@ -31,7 +31,7 @@ public abstract class TuningGame : MonoBehaviour
         gameObject.SetActive(open);
     }
 
-    protected void CloseGame()
+    public void CloseGame()
     {
         tunesFor.CloseGame(tuningIndex);
     }

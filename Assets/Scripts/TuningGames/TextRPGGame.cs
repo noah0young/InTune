@@ -32,7 +32,8 @@ public class TextRPGGame : TuningGame
     private bool fastForwardTextChunk = false;
     private bool tunedAtEndOfDialogue = false;
 
-    [SerializeField] private List<Dialogue> dialogues;
+    [SerializeField] private Dialogue startDialogue;
+    private Dialogue curDialogue;
 
     void StartGame()
     {
@@ -48,11 +49,18 @@ public class TextRPGGame : TuningGame
         {
             StartGame();
         }
+        else
+        {
+            if (curDialogue != null)
+            {
+                curDialogue.DestroyAllOptionInstances();
+            }
+        }
     }
 
     private IEnumerator RunDialogue()
     {
-        Dialogue curDialogue = dialogues[0];
+        curDialogue = startDialogue;
         while (curDialogue != null)
         {
             foreach (string t in curDialogue.texts)

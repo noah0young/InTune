@@ -54,14 +54,30 @@ public class GameManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);
+            //DontDestroyOnLoad(gameObject);
         }
         else
         {
             Destroy(gameObject);
         }
         SetUpInput();
-        thanksObj.SetActive(false);
+        ShowThanks(false);
+    }
+
+    private void ShowThanks(bool show)
+    {
+        if (thanksObj != null)
+        {
+            thanksObj.SetActive(show);
+        }
+    }
+
+    private void OnDestroy()
+    {
+        if (Instance == this)
+        {
+            Instance = null;
+        }
     }
 
     private void SetUpInput()
@@ -90,12 +106,12 @@ public class GameManager : MonoBehaviour
         if (curInstrument != null)
         {
             StartCoroutine(MoveInstrument(instrumentPos, curInstrumentInfo.OffscreenEnd(), instrumentMoveTime, curInstrument, true));
-            thanksObj.SetActive(true);
+            ShowThanks(true);
         }
         curInstrument = newInstrument.Create(instrumentParent);
         curInstrumentInfo = newInstrument;
         yield return StartCoroutine(MoveInstrument(curInstrumentInfo.OffscreenStart(), instrumentPos, instrumentMoveTime, curInstrument));
-        thanksObj.SetActive(false);
+        ShowThanks(false);
     }
 
     private IEnumerator MoveInstrument(Transform start, Transform end, float time, Instrument newInstrument)
