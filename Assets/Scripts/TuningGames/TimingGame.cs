@@ -6,6 +6,8 @@ public class TimingGame : TuningGame
 {
     private bool paused;
 
+    [SerializeField] private Canvas mainCanvas;
+
     [Header("Transforms")]
     [SerializeField] private RectTransform timingBack;
     [SerializeField] private RectTransform targetRange;
@@ -33,6 +35,7 @@ public class TimingGame : TuningGame
 
     private void Start()
     {
+        mainCanvas.worldCamera = Camera.main;
         paused = false;
         SetTargetRange();
         StartCoroutine(WaitForClick());
@@ -95,7 +98,9 @@ public class TimingGame : TuningGame
             GameObject successFailPrefab = OnTime() ? successPrefab : failPrefab;
             if (successFailPrefab != null)
             {
-                Destroy(Instantiate(successFailPrefab), showSuccessFailTime);
+                GameObject successFailInstance = Instantiate(successFailPrefab);
+                successFailInstance.GetComponent<Canvas>().worldCamera = Camera.main;
+                Destroy(successFailInstance, showSuccessFailTime);
             }
             yield return new WaitForSeconds(showSuccessFailTime);
             if (OnTime())

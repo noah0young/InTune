@@ -33,7 +33,6 @@ RectTransform:
   - {fileID: 8475594220643185849}
   - {fileID: 4973536504293095050}
   - {fileID: 5111933981571719538}
-  - {fileID: 1802072373329509180}
   m_Father: {fileID: 5978721086928554578}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
@@ -139,17 +138,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0a877183666e4abdbccf2eaf923752b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isFish: 0
   tuningMinigamesPrefabs:
-  - {fileID: 2293201710963907154, guid: f9d9b2ade2eb542bea91b0e0155d237d, type: 3}
-  - {fileID: 3093569679192378520, guid: 6e02adda359d046fc95e9f8aafe121cb, type: 3}
-  - {fileID: 8968986762865586049, guid: cc024f5517d9a4b70a12ab83a7f055a2, type: 3}
-  - {fileID: 5834028356937364081, guid: 9881dbe2202294474a7d71a4c255a662, type: 3}
+  - {fileID: 6387437648934302819, guid: db9b1d5d000b0444597deddc57ed18e8, type: 3}
+  - {fileID: 1554369137615403785, guid: b5bf606533af44edd94a4d409a7db1dd, type: 3}
+  - {fileID: 3213736521366750650, guid: c19fcff44d71948daa1d22e7227ba774, type: 3}
   targetButtons:
   - {fileID: 7781822698096697888}
   - {fileID: 6585467254546735123}
   - {fileID: 6381871517356980203}
-  - {fileID: 532539440488508837}
   checkTargetMat: {fileID: 2100000, guid: 57b5cccdfafc345e6a2b8e1d6b1adbbe, type: 2}
+  questionTargetMat: {fileID: 0}
 --- !u!1 &5309207734655383995
 GameObject:
   m_ObjectHideFlags: 0
@@ -300,119 +299,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!1001 &2201865509163211104
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 4214114595910361011}
-    m_Modifications:
-    - target: {fileID: 543992471009501788, guid: d7128587d391d4782904192bca0beebb, type: 3}
-      propertyPath: m_Pivot.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 543992471009501788, guid: d7128587d391d4782904192bca0beebb, type: 3}
-      propertyPath: m_Pivot.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 543992471009501788, guid: d7128587d391d4782904192bca0beebb, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 543992471009501788, guid: d7128587d391d4782904192bca0beebb, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 543992471009501788, guid: d7128587d391d4782904192bca0beebb, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 543992471009501788, guid: d7128587d391d4782904192bca0beebb, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 543992471009501788, guid: d7128587d391d4782904192bca0beebb, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 80
-      objectReference: {fileID: 0}
-    - target: {fileID: 543992471009501788, guid: d7128587d391d4782904192bca0beebb, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 81.6299
-      objectReference: {fileID: 0}
-    - target: {fileID: 543992471009501788, guid: d7128587d391d4782904192bca0beebb, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 543992471009501788, guid: d7128587d391d4782904192bca0beebb, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 543992471009501788, guid: d7128587d391d4782904192bca0beebb, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 543992471009501788, guid: d7128587d391d4782904192bca0beebb, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 543992471009501788, guid: d7128587d391d4782904192bca0beebb, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 543992471009501788, guid: d7128587d391d4782904192bca0beebb, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 543992471009501788, guid: d7128587d391d4782904192bca0beebb, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 543992471009501788, guid: d7128587d391d4782904192bca0beebb, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 269
-      objectReference: {fileID: 0}
-    - target: {fileID: 543992471009501788, guid: d7128587d391d4782904192bca0beebb, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -0.6799927
-      objectReference: {fileID: 0}
-    - target: {fileID: 543992471009501788, guid: d7128587d391d4782904192bca0beebb, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 543992471009501788, guid: d7128587d391d4782904192bca0beebb, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 543992471009501788, guid: d7128587d391d4782904192bca0beebb, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6487636324282260111, guid: d7128587d391d4782904192bca0beebb, type: 3}
-      propertyPath: m_Name
-      value: TuningButton (3)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: d7128587d391d4782904192bca0beebb, type: 3}
---- !u!114 &532539440488508837 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1868269057009546437, guid: d7128587d391d4782904192bca0beebb, type: 3}
-  m_PrefabInstance: {fileID: 2201865509163211104}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!224 &1802072373329509180 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 543992471009501788, guid: d7128587d391d4782904192bca0beebb, type: 3}
-  m_PrefabInstance: {fileID: 2201865509163211104}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4719097971136168750
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -505,6 +391,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TuningButton (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6487636324282260111, guid: d7128587d391d4782904192bca0beebb, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -596,11 +486,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 543992471009501788, guid: d7128587d391d4782904192bca0beebb, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -262
+      value: 246
       objectReference: {fileID: 0}
     - target: {fileID: 543992471009501788, guid: d7128587d391d4782904192bca0beebb, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -115.68001
+      value: -40.815
       objectReference: {fileID: 0}
     - target: {fileID: 543992471009501788, guid: d7128587d391d4782904192bca0beebb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

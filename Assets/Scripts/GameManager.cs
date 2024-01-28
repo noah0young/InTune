@@ -84,6 +84,7 @@ public class GameManager : MonoBehaviour
     {
         input = new InputController();
         input.Game.Click.Enable();
+        Instance.input.Game.MousePos.Enable();
     }
 
     private void Start()
@@ -144,5 +145,10 @@ public class GameManager : MonoBehaviour
     public static bool Click()
     {
         return Instance.input.Game.Click.IsPressed();
+    }
+
+    public static Vector2 MousePos()
+    {
+        return Instance.input.Game.MousePos.ReadValue<Vector2>();
     }
 }
