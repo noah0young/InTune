@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OscilloscopeScreenManager : MonoBehaviour
+public class OscilloscopeScreenManager : TuningGame
 {
+    [SerializeField] private Canvas mainCanvas;
     [SerializeField] private GameObject over;
     [SerializeField] private GameObject under;
     [SerializeField] private GameObject critical;
@@ -22,6 +23,8 @@ public class OscilloscopeScreenManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        mainCanvas.worldCamera = Camera.main;
+
         P.SetUpperBound(PUpperBound);
         P.SetLowerBound(PLowerBound);
 
@@ -88,6 +91,7 @@ public class OscilloscopeScreenManager : MonoBehaviour
         if (correct == 3)
         {
             status = "critical";
+            OnTuned();
         } else if(over == 3 || under == 3)
         {
             status = "disaster";

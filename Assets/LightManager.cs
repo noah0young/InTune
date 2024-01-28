@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LightManager : MonoBehaviour
 {
-    [SerializeField] private SpriteRenderer light;
+    [SerializeField] private Image light;
     [SerializeField] private Material offmaterial;
     [SerializeField] private Material onmaterial;
 

@@ -147,7 +147,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7144179496399436606
 Transform:
   m_ObjectHideFlags: 0
@@ -801,11 +801,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2979432250350205452}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 573049c2e9b39c64cbbfa03540f09bf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainCanvas: {fileID: 0}
   over: {fileID: 5676031686589777079}
   under: {fileID: 2756828540155826619}
   critical: {fileID: 2253053871302069707}
@@ -1608,6 +1609,10 @@ PrefabInstance:
       propertyPath: tuningMinigamesPrefabs.Array.size
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3291078698941782400, guid: 492a2a9aa4b9a40d9bc73c26ffad4559, type: 3}
+      propertyPath: tuningMinigamesPrefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 6053602397393417483, guid: 5fa23e4126c0149e4bbeebc651657de6, type: 3}
     - target: {fileID: 4214114595910361011, guid: 492a2a9aa4b9a40d9bc73c26ffad4559, type: 3}
       propertyPath: m_SizeDelta.x
       value: 800
@@ -1706,11 +1711,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8475594220643185849, guid: 492a2a9aa4b9a40d9bc73c26ffad4559, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 473
+      value: -81
       objectReference: {fileID: 0}
     - target: {fileID: 8475594220643185849, guid: 492a2a9aa4b9a40d9bc73c26ffad4559, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 310
+      value: 68
       objectReference: {fileID: 0}
     - target: {fileID: 9033763569574712069, guid: 492a2a9aa4b9a40d9bc73c26ffad4559, type: 3}
       propertyPath: m_Sprite

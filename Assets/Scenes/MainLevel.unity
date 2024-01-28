@@ -1988,11 +1988,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4461630217014019956, guid: 3652ed0dd42834ccbac2ed2a254539e5, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -299.9997
+      value: -299.99976
       objectReference: {fileID: 0}
     - target: {fileID: 4843757565355918089, guid: 3652ed0dd42834ccbac2ed2a254539e5, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 299.9997
+      value: 299.99976
       objectReference: {fileID: 0}
     - target: {fileID: 7301040474504071393, guid: 3652ed0dd42834ccbac2ed2a254539e5, type: 3}
       propertyPath: m_Camera
