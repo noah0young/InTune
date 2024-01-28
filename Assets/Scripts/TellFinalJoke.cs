@@ -13,6 +13,7 @@ public class TellFinalJoke : MonoBehaviour
     [SerializeField] private string joke = "You can tune a piano, but you can't TUNA fish!";
     [SerializeField] private TMP_Text jokeTextBox;
     private AudioSource audioSource;
+    [SerializeField] private int jokeSongIndex = 3;
 
     private void Awake()
     {
@@ -34,6 +35,7 @@ public class TellFinalJoke : MonoBehaviour
 
     private void TellJokeInternal()
     {
+        MusicManager.SetSongIndex(jokeSongIndex);
         StartCoroutine(JokeCoroutine());
     }
 

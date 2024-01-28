@@ -31,6 +31,11 @@ public class Instrument : MonoBehaviour
             int buttonIndex = i;
             targetButtons[i].onClick.AddListener(() => OpenMinigame(buttonIndex));
         }
+
+        if (isFish)
+        {
+            GameManager.StartNextSceneTimer();
+        }
     }
 
     public bool IsTuned()

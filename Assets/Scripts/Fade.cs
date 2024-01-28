@@ -10,6 +10,7 @@ public class Fade : MonoBehaviour
     [SerializeField] private bool fadeInOnStart = false;
     [SerializeField] private Color startColor;
     [SerializeField] private Color endColor;
+    [SerializeField] private int songIndex;
 
     private void Start()
     {
@@ -22,6 +23,7 @@ public class Fade : MonoBehaviour
     public void CallFade()
     {
         StartCoroutine(FadeRoutine());
+        MusicManager.SetSongIndex(songIndex);
     }
 
     private IEnumerator FadeRoutine()

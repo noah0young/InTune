@@ -48,6 +48,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Transform instrumentPos;
     [SerializeField] private GameObject thanksObj;
 
+    [Header("End")]
+    private float nextSceneTimer;
+    private string nextScene;
+
 
     private void Awake()
     {
@@ -150,5 +154,16 @@ public class GameManager : MonoBehaviour
     public static Vector2 MousePos()
     {
         return Instance.input.Game.MousePos.ReadValue<Vector2>();
+    }
+
+    public static void StartNextSceneTimer()
+    {
+        Instance.StartCoroutine(Instance.StartNextSceneTimerRoutine());
+    }
+
+    private IEnumerator StartNextSceneTimerRoutine()
+    {
+        yield return new WaitForSeconds(nextSceneTimer);
+        SceneSwitcher.LoadScene(nextScene);
     }
 }

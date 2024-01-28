@@ -13,6 +13,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1069626147247432593, guid: b0ba4843b0d7f4473838dba2124c7d65, type: 3}
+      propertyPath: isFish
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1069626147247432593, guid: b0ba4843b0d7f4473838dba2124c7d65, type: 3}
       propertyPath: targetButtons.Array.size
       value: 0
       objectReference: {fileID: 0}

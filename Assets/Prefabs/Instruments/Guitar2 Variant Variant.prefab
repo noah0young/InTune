@@ -147,16 +147,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3645280787257423624, guid: 2c13ca93bbde14b0c9a7259357f7b291, type: 3}
       propertyPath: targetButtons.Array.size
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 3645280787257423624, guid: 2c13ca93bbde14b0c9a7259357f7b291, type: 3}
+      propertyPath: targetButtons.Array.data[2]
+      value: 
+      objectReference: {fileID: 53810387032197464}
     - target: {fileID: 3645280787257423624, guid: 2c13ca93bbde14b0c9a7259357f7b291, type: 3}
       propertyPath: targetButtons.Array.data[3]
       value: 
       objectReference: {fileID: 53810387032197464}
     - target: {fileID: 3645280787257423624, guid: 2c13ca93bbde14b0c9a7259357f7b291, type: 3}
       propertyPath: tuningMinigamesPrefabs.Array.size
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 3645280787257423624, guid: 2c13ca93bbde14b0c9a7259357f7b291, type: 3}
+      propertyPath: tuningMinigamesPrefabs.Array.data[2]
+      value: 
+      objectReference: {fileID: 8968986762865586049, guid: cc024f5517d9a4b70a12ab83a7f055a2, type: 3}
     - target: {fileID: 3645280787257423624, guid: 2c13ca93bbde14b0c9a7259357f7b291, type: 3}
       propertyPath: tuningMinigamesPrefabs.Array.data[3]
       value: 

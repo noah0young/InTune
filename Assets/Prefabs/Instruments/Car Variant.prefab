@@ -402,6 +402,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 543992471009501788, guid: d7128587d391d4782904192bca0beebb, type: 3}
   m_PrefabInstance: {fileID: 499060750219002673}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2233901777614059508 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1868269057009546437, guid: d7128587d391d4782904192bca0beebb, type: 3}
+  m_PrefabInstance: {fileID: 499060750219002673}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &7115905371586008329
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -417,7 +428,7 @@ PrefabInstance:
     - target: {fileID: 3291078698941782400, guid: 492a2a9aa4b9a40d9bc73c26ffad4559, type: 3}
       propertyPath: targetButtons.Array.data[2]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2233901777614059508}
     - target: {fileID: 3291078698941782400, guid: 492a2a9aa4b9a40d9bc73c26ffad4559, type: 3}
       propertyPath: targetButtons.Array.data[3]
       value: 

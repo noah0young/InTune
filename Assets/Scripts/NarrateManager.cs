@@ -11,11 +11,13 @@ public class NarrateManager : MonoBehaviour
     [SerializeField] private float textShowTime = .5f;
     [SerializeField] private Color fontColor = Color.black;
     [SerializeField] private string nextScene;
+    [SerializeField] private int songIndex = 1;
 
     // Start is called before the first frame update
     private void Start()
     {
         HideAllMessages();
+        MusicManager.SetSongIndex(songIndex);
         StartCoroutine(GoThroughMessages());
     }
 
