@@ -455,8 +455,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 90
-  m_fontSizeBase: 90
+  m_fontSize: 76.46
+  m_fontSizeBase: 76.46
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1086,8 +1086,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 280, y: -320}
-  m_SizeDelta: {x: 500, y: 300}
+  m_AnchoredPosition: {x: -635, y: 41}
+  m_SizeDelta: {x: 431.5542, y: 278.3856}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2174170620647881229
 CanvasRenderer:
@@ -1409,11 +1409,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9040368090779222775, guid: 4b2a27d652a324f2cb2fdc086afa381c, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -502
+      value: -588
       objectReference: {fileID: 0}
     - target: {fileID: 9040368090779222775, guid: 4b2a27d652a324f2cb2fdc086afa381c, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 185
+      value: 37
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

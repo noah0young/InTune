@@ -195,6 +195,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2572532887902253002, guid: dd6d0ff5dfe9b44bebccdac15dd5c997, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2979432250350205452, guid: dd6d0ff5dfe9b44bebccdac15dd5c997, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -202,6 +206,10 @@ PrefabInstance:
     - target: {fileID: 4052163789874589627, guid: dd6d0ff5dfe9b44bebccdac15dd5c997, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Decrement
+      objectReference: {fileID: 0}
+    - target: {fileID: 5641506400742587013, guid: dd6d0ff5dfe9b44bebccdac15dd5c997, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5641506400742587013, guid: dd6d0ff5dfe9b44bebccdac15dd5c997, type: 3}
       propertyPath: currentNumber
@@ -300,6 +308,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8581622020958543273, guid: dd6d0ff5dfe9b44bebccdac15dd5c997, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8581622020958543273, guid: dd6d0ff5dfe9b44bebccdac15dd5c997, type: 3}
       propertyPath: currentNumber
       value: 120
       objectReference: {fileID: 0}
@@ -382,7 +394,7 @@ PrefabInstance:
 
 
         Press the arrow buttons on the screen
-        and set all numbers to be between 60 and 100'
+        and set all numbers to be between 50 and 100'
       objectReference: {fileID: 0}
     - target: {fileID: 233171248602537390, guid: 4b2a27d652a324f2cb2fdc086afa381c, type: 3}
       propertyPath: m_fontSize

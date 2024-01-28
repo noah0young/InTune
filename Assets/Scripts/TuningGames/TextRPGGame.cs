@@ -26,6 +26,7 @@ public class TextRPGGame : TuningGame
     [SerializeField] private AudioClip defaultTextSound;
     [SerializeField] private List<AudioClipWithName> textSounds;
     [SerializeField] private float timeBetweenChars = 0.1f;
+    [SerializeField] private float volume = 1f;
     private AudioSource textSoundPlayer;
     private const string SOUND_ID_START = "[SID";
     private const string TUNED_ID = "[TUNED]";
@@ -189,6 +190,7 @@ public class TextRPGGame : TuningGame
     private void PlayTextSound(string name)
     {
         AudioClip clip = GetTextSound(name);
+        textSoundPlayer.volume = volume * MusicManager.GetVolume();
         textSoundPlayer.clip = clip;
         textSoundPlayer.Play();
     }

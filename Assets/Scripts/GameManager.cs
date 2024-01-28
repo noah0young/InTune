@@ -205,7 +205,7 @@ public class GameManager : MonoBehaviour
     {
         if (Instance.hideWhenMinigame != null)
         {
-            Instance.hideWhenMinigame.SetActive(inGame);
+            Instance.hideWhenMinigame.SetActive(!inGame);
         }
     }
 }
