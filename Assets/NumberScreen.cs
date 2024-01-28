@@ -43,18 +43,33 @@ public class NumberScreen : MonoBehaviour
         }
     }
 
-    private void increment(int amount = 10)
+    public void increment(int amount = 10)
     {
         currentNumber += amount;
     }
 
-    private void decrement(int amount = 10)
+    public void decrement(int amount = 10)
     {
         currentNumber -= amount;
         if(currentNumber < 0)
         {
             currentNumber = 0;
         }
+    }
+
+    public int GetNumber()
+    {
+        return currentNumber;
+    }
+    
+    public void SetUpperBound(int bound)
+    {
+        upperBound = bound;
+    }
+
+    public void SetLowerBound(int bound)
+    {
+        lowerBound = bound;
     }
 
 }
