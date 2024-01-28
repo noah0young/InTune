@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class LightManager : MonoBehaviour
 {
-    [SerializeField] private Image light;
+    [SerializeField] private Image lightIcon;
     [SerializeField] private Material offmaterial;
     [SerializeField] private Material onmaterial;
 
@@ -15,10 +15,10 @@ public class LightManager : MonoBehaviour
     {
         if(status)
         {
-            light.material = onmaterial;
+            lightIcon.material = onmaterial;
         } else
         {
-            light.material = offmaterial;
+            lightIcon.material = offmaterial;
         }
     }
 }
