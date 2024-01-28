@@ -340,6 +340,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8064273684088094649}
     m_Modifications:
+    - target: {fileID: 233171248602537390, guid: 4b2a27d652a324f2cb2fdc086afa381c, type: 3}
+      propertyPath: m_text
+      value: 'To tune this component:
+
+
+        Press the arrow buttons on the screen
+        and set all numbers to be between 60 and 100'
+      objectReference: {fileID: 0}
+    - target: {fileID: 233171248602537390, guid: 4b2a27d652a324f2cb2fdc086afa381c, type: 3}
+      propertyPath: m_fontSize
+      value: 33
+      objectReference: {fileID: 0}
+    - target: {fileID: 233171248602537390, guid: 4b2a27d652a324f2cb2fdc086afa381c, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 33
+      objectReference: {fileID: 0}
     - target: {fileID: 342730520791955479, guid: 4b2a27d652a324f2cb2fdc086afa381c, type: 3}
       propertyPath: m_Name
       value: GameBase
@@ -426,7 +442,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3721560972612652192, guid: 4b2a27d652a324f2cb2fdc086afa381c, type: 3}
       propertyPath: m_text
-      value: 18
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 9040368090779222775, guid: 4b2a27d652a324f2cb2fdc086afa381c, type: 3}
       propertyPath: m_AnchoredPosition.x

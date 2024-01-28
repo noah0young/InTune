@@ -293,6 +293,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1caa32f9835c44278bdba29b43f41b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speedRunningClockText: {fileID: 0}
+  numCompletedText: {fileID: 0}
   allInstruments:
   - name: Violin
     prefab: {fileID: 770277466933697029, guid: 492a2a9aa4b9a40d9bc73c26ffad4559, type: 3}
@@ -339,6 +341,7 @@ MonoBehaviour:
     requestSprite: {fileID: 0}
     offscreenStart: {fileID: 236954350291633115}
     offscreenEnd: {fileID: 4350771229345170750}
+  hideWhenMinigame: {fileID: 0}
   instrumentParent: {fileID: 8414881905896331256}
   instrumentMoveTime: 1
   instrumentPos: {fileID: 5283079969046106145}

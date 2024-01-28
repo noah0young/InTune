@@ -141,7 +141,7 @@ MonoBehaviour:
   isFish: 0
   tuningMinigamesPrefabs:
   - {fileID: 6387437648934302819, guid: db9b1d5d000b0444597deddc57ed18e8, type: 3}
-  - {fileID: 6387437648934302819, guid: db9b1d5d000b0444597deddc57ed18e8, type: 3}
+  - {fileID: 5721561633330276962, guid: 5c4369ee0f1c84df89bd45272d439816, type: 3}
   - {fileID: 3213736521366750650, guid: c19fcff44d71948daa1d22e7227ba774, type: 3}
   targetButtons:
   - {fileID: 7781822698096697888}

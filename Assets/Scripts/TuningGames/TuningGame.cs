@@ -28,6 +28,7 @@ public abstract class TuningGame : MonoBehaviour
 
     public virtual void SetGameOpen(bool open)
     {
+        GameManager.InMinigame(open);
         gameObject.SetActive(open);
     }
 

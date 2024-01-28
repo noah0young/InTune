@@ -47,6 +47,7 @@ public class GameManager : MonoBehaviour
     private int instrumentIndex = 0;
     private InstrumentInfo curInstrumentInfo = null;
     private Instrument curInstrument;
+    [SerializeField] private GameObject hideWhenMinigame;
 
     [Header("Instrument Movement")]
     [SerializeField] private Transform instrumentParent;
@@ -57,7 +58,6 @@ public class GameManager : MonoBehaviour
     [Header("End")]
     [SerializeField] private float nextSceneTimer = 120;
     [SerializeField] private string nextScene = "FailNarrate";
-
 
     private void Awake()
     {
@@ -199,5 +199,13 @@ public class GameManager : MonoBehaviour
     {
         yield return new WaitForSeconds(nextSceneTimer);
         SceneSwitcher.LoadScene(nextScene);
+    }
+
+    public static void InMinigame(bool inGame)
+    {
+        if (Instance.hideWhenMinigame != null)
+        {
+            Instance.hideWhenMinigame.SetActive(inGame);
+        }
     }
 }

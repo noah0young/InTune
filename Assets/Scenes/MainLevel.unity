@@ -1431,7 +1431,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Click on the      to tune
+  m_text: "Click on \nthe      to tune"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1458,8 +1458,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 90
-  m_fontSizeBase: 90
+  m_fontSize: 66.9
+  m_fontSizeBase: 66.9
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1646,7 +1646,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 9.4, y: -6.2}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1638975075
@@ -1720,10 +1720,10 @@ RectTransform:
   - {fileID: 483237077}
   m_Father: {fileID: 1573372771}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 414.1001, y: 345.19995}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 1131.8002, y: 257.1}
+  m_SizeDelta: {x: 303.6, y: 257.1}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &1719575752
 MonoBehaviour:
@@ -2042,6 +2042,10 @@ PrefabInstance:
       propertyPath: thanksObj
       value: 
       objectReference: {fileID: 59355892}
+    - target: {fileID: 8188801092650119802, guid: 3652ed0dd42834ccbac2ed2a254539e5, type: 3}
+      propertyPath: hideWhenMinigame
+      value: 
+      objectReference: {fileID: 1719575750}
     - target: {fileID: 8188801092650119802, guid: 3652ed0dd42834ccbac2ed2a254539e5, type: 3}
       propertyPath: numCompletedText
       value: 
