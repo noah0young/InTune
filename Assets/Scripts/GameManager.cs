@@ -1,9 +1,11 @@
-using System.Collections;
+//using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using TMPro;
 using UnityEngine.InputSystem;
 using UnityEngine.Windows;
+using System.Collections;
 
 public class GameManager : MonoBehaviour
 {
@@ -36,6 +38,10 @@ public class GameManager : MonoBehaviour
 
     private InputController input;
 
+    private float fullTimeTaken = 0;
+    [SerializeField] private TMP_Text speedRunningClockText;
+    [SerializeField] private TMP_Text numCompletedText;
+
     [Header("Instruments")]
     [SerializeField] private List<InstrumentInfo> allInstruments;
     private int instrumentIndex = 0;
@@ -49,8 +55,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject thanksObj;
 
     [Header("End")]
-    private float nextSceneTimer;
-    private string nextScene;
+    [SerializeField] private float nextSceneTimer = 120;
+    [SerializeField] private string nextScene = "FailNarrate";
 
 
     private void Awake()
@@ -96,10 +102,38 @@ public class GameManager : MonoBehaviour
         StartCoroutine(GameRunner());
     }
 
+    private void Update()
+    {
+        UpdateSpeedrunningClock();
+        fullTimeTaken += Time.deltaTime;
+    }
+
+    private void UpdateSpeedrunningClock()
+    {
+        if (speedRunningClockText != null)
+        {
+            string timeTakenStr = "";
+            int minTaken = (int)(fullTimeTaken / 60);
+            int secondsTaken = (int)(fullTimeTaken % 60);
+            int millisecondsTaken = (int)(fullTimeTaken % 1 * 100);
+            timeTakenStr += minTaken + ":" + secondsTaken.ToString("D2") + "." + millisecondsTaken.ToString("D2");
+            speedRunningClockText.text = timeTakenStr;
+        }
+    }
+
+    private void SetNumCompleted(int numCompleted)
+    {
+        if (numCompletedText != null)
+        {
+            numCompletedText.text = numCompleted + " / " + allInstruments.Count;
+        }
+    }
+
     private IEnumerator GameRunner()
     {
         while (instrumentIndex < allInstruments.Count)
         {
+            SetNumCompleted(instrumentIndex);
             yield return SwitchInstruments(allInstruments[instrumentIndex]);
             yield return new WaitUntil(() => curInstrument.IsTuned());
             instrumentIndex++;

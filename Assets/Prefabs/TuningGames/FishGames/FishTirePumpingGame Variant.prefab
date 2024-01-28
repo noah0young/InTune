@@ -13,6 +13,10 @@ PrefabInstance:
       value: FishTirePumpingGame Variant
       objectReference: {fileID: 0}
     - target: {fileID: 3674938764169363745, guid: 6e02adda359d046fc95e9f8aafe121cb, type: 3}
+      propertyPath: broken
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3674938764169363745, guid: 6e02adda359d046fc95e9f8aafe121cb, type: 3}
       propertyPath: pumpSpeedMax
       value: 4
       objectReference: {fileID: 0}

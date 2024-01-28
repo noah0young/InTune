@@ -35,23 +35,22 @@ public class TellFinalJoke : MonoBehaviour
 
     private void TellJokeInternal()
     {
-        MusicManager.SetSongIndex(jokeSongIndex);
         StartCoroutine(JokeCoroutine());
     }
 
     private IEnumerator JokeCoroutine()
     {
-        Debug.Log("Print joke coroutine");
         audioSource.clip = textSound;
         int index = 0;
         jokeTextBox.text = "";
         while (index < joke.Length)
         {
-            Debug.Log("Print joke text");
             jokeTextBox.text += joke[index];
             audioSource.Play();
             index += 1;
             yield return new WaitForSeconds(timeBetweenChars);
         }
+        MusicManager.SetSongIndex(jokeSongIndex);
+        MusicManager.EndLoop();
     }
 }

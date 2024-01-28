@@ -136,7 +136,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isFish: 0
   tuningMinigamesPrefabs:
-  - {fileID: 2293201710963907154, guid: f9d9b2ade2eb542bea91b0e0155d237d, type: 3}
+  - {fileID: 6452993425136501305, guid: 67bdd74457c5445e68fe634b0fb22ff7, type: 3}
   - {fileID: 1183421446238249129, guid: 884cdad2f2b1943bfa45064f3736ef04, type: 3}
   targetButtons:
   - {fileID: 4253479122365215364}

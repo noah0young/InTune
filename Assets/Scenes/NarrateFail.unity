@@ -870,9 +870,10 @@ MonoBehaviour:
   - {fileID: 211609942}
   - {fileID: 1644990163}
   timeBetween: 0.1
-  textShowTime: 5
+  textShowTime: 3
   fontColor: {r: 0, g: 0, b: 0, a: 1}
   nextScene: EndJoke
+  songIndex: 1
 --- !u!4 &1846829076
 Transform:
   m_ObjectHideFlags: 0

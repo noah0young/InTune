@@ -684,10 +684,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clips:
-  - {fileID: 8300000, guid: afdedc16d8b634b8db8b09c4296586e4, type: 3}
-  - {fileID: 0}
-  - {fileID: 8300000, guid: 1fa3c391633ee44c0ac576fd06c04bd3, type: 3}
-  - {fileID: 0}
+  - clip: {fileID: 8300000, guid: afdedc16d8b634b8db8b09c4296586e4, type: 3}
+    volume: 0.5
+  - clip: {fileID: 8300000, guid: f42d71284486f461f94902cb16b311cb, type: 3}
+    volume: 0.7
+  - clip: {fileID: 8300000, guid: 1fa3c391633ee44c0ac576fd06c04bd3, type: 3}
+    volume: 0.7
+  - clip: {fileID: 8300000, guid: 7e85e969137ad4b4c8d6ee8cffd81346, type: 3}
+    volume: 0.85
 --- !u!1 &1619094380
 GameObject:
   m_ObjectHideFlags: 0

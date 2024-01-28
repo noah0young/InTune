@@ -33,12 +33,17 @@ public class TimingGame : TuningGame
     [SerializeField] private GameObject failPrefab;
     [SerializeField] private float showSuccessFailTime = 1;
 
-    private void Start()
+    public override void SetGameOpen(bool open)
     {
-        mainCanvas.worldCamera = Camera.main;
-        paused = false;
-        SetTargetRange();
-        StartCoroutine(WaitForClick());
+        base.SetGameOpen(open);
+        if (open)
+        {
+            StopAllCoroutines();
+            mainCanvas.worldCamera = Camera.main;
+            paused = false;
+            SetTargetRange();
+            StartCoroutine(WaitForClick());
+        }
     }
 
     private void SetTargetRange()

@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class TirePumpGame : HoldInPlaceTuningGame
 {
+    [SerializeField] private bool broken = false;
+
     [Header("Transforms")]
     [SerializeField] private RectTransform timingBack;
     [SerializeField] private RectTransform targetRange;
@@ -28,11 +30,16 @@ public class TirePumpGame : HoldInPlaceTuningGame
     private float rangeBottom;
     private float cursorPos = 0f;
 
-    protected override void Start()
+    public override void SetGameOpen(bool open)
     {
-        SetTargetRange();
-        SetCursorPos(cursorPos);
-        StartCoroutine(WaitForClick());
+        StopAllCoroutines();
+        base.SetGameOpen(open);
+        if (open)
+        {
+            SetTargetRange();
+            SetCursorPos(cursorPos);
+            StartCoroutine(WaitForClick());
+        }
     }
 
     private void SetTargetRange()
@@ -65,6 +72,11 @@ public class TirePumpGame : HoldInPlaceTuningGame
         {
             cursorSpeed = 0;
             cursorPos = 0;
+        }
+        else if (cursorPos >= 1 && !broken)
+        {
+            cursorSpeed = 0;
+            cursorPos = 1;
         }
         SetCursorPos(cursorPos);
     }

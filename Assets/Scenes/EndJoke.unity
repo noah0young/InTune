@@ -1156,6 +1156,7 @@ MonoBehaviour:
   fadeInOnStart: 1
   startColor: {r: 1, g: 1, b: 1, a: 1}
   endColor: {r: 1, g: 1, b: 1, a: 0}
+  songIndex: 2
 --- !u!4 &1096616603
 Transform:
   m_ObjectHideFlags: 0
@@ -1206,6 +1207,7 @@ MonoBehaviour:
   textSound: {fileID: 0}
   joke: You can tune a piano, but you can't TUNA fish!
   jokeTextBox: {fileID: 1938047243}
+  jokeSongIndex: 3
 --- !u!82 &1573457071
 AudioSource:
   m_ObjectHideFlags: 0

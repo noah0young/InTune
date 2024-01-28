@@ -343,6 +343,8 @@ MonoBehaviour:
   instrumentMoveTime: 1
   instrumentPos: {fileID: 5283079969046106145}
   thanksObj: {fileID: 0}
+  nextSceneTimer: 60
+  nextScene: NarrateFail
 --- !u!114 &8676599152459913389
 MonoBehaviour:
   m_ObjectHideFlags: 0
