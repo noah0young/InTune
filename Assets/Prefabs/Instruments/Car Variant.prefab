@@ -558,7 +558,7 @@ PrefabInstance:
     - target: {fileID: 3291078698941782400, guid: 492a2a9aa4b9a40d9bc73c26ffad4559, type: 3}
       propertyPath: tuningMinigamesPrefabs.Array.data[0]
       value: 
-      objectReference: {fileID: 8968986762865586049, guid: cc024f5517d9a4b70a12ab83a7f055a2, type: 3}
+      objectReference: {fileID: 1468501233243633101, guid: 6e9c401c6d4e145f7bbc606f53aaaf4b, type: 3}
     - target: {fileID: 3291078698941782400, guid: 492a2a9aa4b9a40d9bc73c26ffad4559, type: 3}
       propertyPath: tuningMinigamesPrefabs.Array.data[1]
       value: 
