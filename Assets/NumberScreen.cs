@@ -33,13 +33,16 @@ public class NumberScreen : MonoBehaviour
         tens.SetNumber(int.Parse(numbero[2].ToString()));
         ones.SetNumber(int.Parse(numbero[3].ToString()));
 
-        if (lowerBound <= currentNumber && currentNumber <= upperBound)
+        if (indicatorLight != null)
         {
-            indicatorLight.SetStatus(true);
-        }
-        else
-        {
-            indicatorLight.SetStatus(false);
+            if (lowerBound <= currentNumber && currentNumber <= upperBound)
+            {
+                indicatorLight.SetStatus(true);
+            }
+            else
+            {
+                indicatorLight.SetStatus(false);
+            }
         }
     }
 

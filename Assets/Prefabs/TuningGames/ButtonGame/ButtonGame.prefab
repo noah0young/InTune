@@ -187,8 +187,8 @@ MonoBehaviour:
     111'
   gridHolder: {fileID: 8695074505016958279}
   buttonGameButtonPrefab: {fileID: 4316899829195002194, guid: 61acfca45d8d7408494b0b9910fe76c4, type: 3}
-  onMat: {fileID: 2100000, guid: ff865ae211a354a07ba6dce406d6565d, type: 2}
-  offMat: {fileID: 2100000, guid: 9a2305507a78149dfa994d5561554afc, type: 2}
+  onMat: {fileID: 2100000, guid: fe1f9d1d6ae6a4a3187a237d442feb4b, type: 2}
+  offMat: {fileID: 2100000, guid: 41fdd4c188a9e47e09b691103c4d5532, type: 2}
   maybeMat: {fileID: 2100000, guid: 0e5f29247d85e4aa296d8d095fa174a4, type: 2}
   maybeNotMat: {fileID: 2100000, guid: 01af33bf4e9544365b2700b32ff55e7e, type: 2}
 --- !u!1 &6959504711044081014

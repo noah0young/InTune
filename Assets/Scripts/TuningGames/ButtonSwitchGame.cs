@@ -38,6 +38,12 @@ public class ButtonSwitchGame : TuningGame
         OnTuned();
     }
 
+    public override void SetGameOpen(bool open)
+    {
+        base.SetGameOpen(open);
+        mainCanvas.worldCamera = Camera.main;
+    }
+
     private bool AllOn()
     {
         for (int x = 0; x < buttonVals.GetLength(0); x++)
